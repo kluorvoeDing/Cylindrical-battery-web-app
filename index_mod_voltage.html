@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>圓柱電池能量密度試算 v12</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="container">
+  <div class="flex">
+    <h1 class="title">圓柱電池能量密度試算 v12</h1>
+    <div class="right toolbar">
+      <input id="importFile" type="file" accept=".json,.csv"/>
+      <button class="btn" id="btnExportJSON">匯出JSON</button>
+      <button class="btn" id="btnExportCSV">匯出CSV</button>
+      <button class="btn" id="btnAdd">新增設計</button>
+      <button class="btn" id="btnRemove">刪除設計</button>
+    </div>
+  </div>
+
+  <div class="sticky-bar">
+    <div class="tabs" id="tabs"></div>
+    <div class="toolbar sticky-tools">
+      <button class="btn primary" id="btnStep1Top">計算</button>
+      <button class="btn primary" id="btnStep2Top">產生</button>
+    </div>
+  </div>
+  <div id="app"></div>
+
+
+  <div class="card">
+    <div class="title">Scatter Plot：Wh/L × Wh/kg (成品)</div>
+    <svg id="scatter" viewBox="0 0 800 360" class="svgbox"></svg>
+  </div>
+</div>
+
+<script src="app_mod_voltage.js"></script>
+</body>
+</html>
